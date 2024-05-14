@@ -1764,7 +1764,8 @@ html {
             <input type="text" placeholder="XXX.XXX.XXX.XXX"
               class="input text-center input-bordered w-full max-w-xs rounded-lg" x-model="url"
               x-show="(serverStatus=='unknown') ? 'hidden': ''" />
-            <div x-effect="fetch('http://'+url+':5000/test').then(data => serverStatus = data.status)">
+            <div
+              x-effect="fetch('http://'+url+':5000/test').then(data => serverStatus = data.status) console.log(data.status)">
               <button x-show="(serverStatus=='200') ? 'hidden': ''"
                 x-on:click="await fetch('http://'+url+':5000/toggle')" class="btn btn-outline btn-accent rounded-lg">
                 Toggle Light
