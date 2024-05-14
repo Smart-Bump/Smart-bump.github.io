@@ -1,1 +1,0 @@
-# Smart-bump.github.io
